@@ -1,0 +1,94 @@
+<ion-view view-title="Dashboard">
+  <ion-content class="padding" ng-controller="ManageDataCtrl" ng-init="init()">
+    <h4>Smart Bell</h4>
+    <p>
+      Send us what you need by clicking on the icons below.
+    </p>
+    <toaster-container toaster-options="{'close-button':false, 'time-out':{ 'toast-warning': 500, 'toast-error': 0 } }"></toaster-container>
+    <div class="list" id="listAlert">
+      <div class="item">
+        <div class="row" >
+          <div class="col">
+            <div class="item-text-center">
+
+              <button class="button button-icon"  ng-model="beacon.message" ng-click="addBeacon(labelNurse, '1'); popNotification();"> 
+                <img class="icon" src="img/patient/nurse.png">
+                <label ng-model="labelNurse">{{labelNurse}}</label>
+              </button>
+            </div>
+          </div>  
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="item-text-center">
+              <button class="button button-icon" ng-model="beacon.message" ng-click="addBeacon(labelDoctor, '0')"> 
+                <img class="icon" src="img/patient/doctor.png">
+                <label ng-model="labelDoctor">{{labelDoctor}}</label>
+              </button>
+            </div>
+          </div>  
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="item-text-center" ng-model="beacon.message" ng-click="addBeacon(labelSosEmergency, '0')">
+              <button class="button button-icon"> 
+                <img class="icon" src="img/patient/sos.png">
+                <label ng-model="labelSosEmergency">{{labelSosEmergency}}</label>
+              </button>
+            </div>
+          </div>  
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="item-text-center" ng-model="beacon.message" ng-click="addBeacon(labelPain, '1')">
+              <button class="button button-icon"> 
+                <img class="icon" src="img/patient/pain.png">
+                <label ng-model="labelPain">{{labelPain}}</label>
+              </button>
+            </div>
+          </div>  
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="item-text-center" ng-model="beacon.message" ng-click="addBeacon(labelEntertainment, '2')">
+              <button class="button button-icon"> 
+                <img id="idLabPiss" class="icon" src="img/patient/tv.png">
+                <label id="labelTv" ng-model="labelEntertainment">{{labelEntertainment}}</label>
+              </button>
+            </div>
+          </div>  
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="item-text-center" ng-model="beacon.message" ng-click="addBeacon(labelPiss, '1')">
+              <button class="button button-icon"> 
+                <img class="icon" src="img/patient/pipi.png">
+                <label ng-model="labelPiss">{{labelPiss}}</label>
+              </button>
+            </div>
+          </div>  
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="item-text-center" ng-model="beacon.message" ng-click="addBeacon(labelPoo, '1')">
+              <button class="button button-icon"> 
+                <img class="icon" src="img/patient/caca.png">
+                <label ng-model="labelPoo">{{labelPoo}}</label>
+              </button>
+            </div>
+          </div>  
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="item-text-center" ng-model="beacon.message" ng-click="addBeacon(labelEat, '1')">
+              <button class="button button-icon"> 
+                <img class="icon" src="img/patient/eat.png">
+                <label ng-model="labelEat">{{labelEat}}</label>
+              </button>
+            </div>
+          </div>  
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

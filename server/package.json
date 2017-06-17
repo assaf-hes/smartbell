@@ -1,0 +1,21 @@
+{
+  "name": "bookstore",
+  "version": "1.0.0",
+  "description": "Simple bookstore app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "body-parser": "*",
+    "cors": "^2.8.3",
+    "express": "^4.15.2",
+    "http": "0.0.0",
+    "mongoose": "*",
+    "socket.io": "^2.0.1",
+    "url": "^0.11.0",
+    "ws": "^2.3.1"
+  },
+  "author": "Brad Traversy",
+  "license": "ISC"
+}

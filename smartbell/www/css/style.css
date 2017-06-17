@@ -1,0 +1,96 @@
+/* Empty. Add your own CSS if you like */
+@font-face {
+    font-family: 'fontawesome';
+    src:url('/../lib/ionic/fonts/fontawesome-webfont.eot');
+    src:url('/../lib/ionic/fonts/fontawesome-webfont.eot') format('embedded-opentype'),
+        url('/../lib/ionic/fonts/fontawesome-webfont.woff') format('woff'),
+        url('/../lib/ionic/fonts/fontawesome-webfont.ttf') format('truetype'),
+        url('/../lib/ionic/fonts/fontawesome-webfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#listAlert {
+    margin-bottom: 10px;
+}
+
+#listAlert .row{
+    margin-bottom: 15px;
+    border-top: 1.1px  solid grey;
+    border-bottom: 1.1px  solid grey;
+}
+
+.fa-qrcode {
+    background-repeat: no-repeat;
+    background-position:center;
+}
+
+.tab-live {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: center;
+}
+
+#listBeacons {
+    margin-left: -15px;
+}
+
+.truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.div-scan {
+    margin-top: 100px;
+}
+
+#btn_scan {
+    height:20px; 
+    width:100px; 
+    margin: -20px -50px; 
+    top:20%; 
+    left:50%;
+}
+
+.item-text-center {
+	display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+    top: 0;
+    height: 100%;
+    border-width: 0;
+    border-color: 0;
+}
+
+.item-text-center .icon {
+	width: 100px;
+	height: 100px;
+    vertical-align:middle;
+}
+
+.item-text-center .img{
+    background-color: red;
+}
+
+#idLabPiss {
+    margin-left: -10px;
+}
+
+#labelTv {
+    text-align: right;
+}
+
+.btn-needs {
+	border-width: 0;
+    border-color: 0;
+    background-color: transparent;
+}
