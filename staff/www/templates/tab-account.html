@@ -1,0 +1,27 @@
+<ion-view view-title="Account">
+	<ion-content ng-controller="ManageDataCtrl">
+    	<ion-list>
+			<div ng-init="getUserAuth()" style="margin-top: 20px;">
+				<p>&nbsp;Your infos :</p>
+				<div class="row truncate">
+					<div class="col">
+					  Satff-ID: {{idStaff}}
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+					  Staff Role: {{staffRole}} {{alert.name}}
+					</div> 
+				</div>
+				<div class="row">
+					<div class="col">
+					  Firstname/Name: {{firstname}} {{name}}
+					</div> 
+				</div>
+			</div>
+			<div style="margin-bottom: 50px;">
+         		<button class="button button-positive" style="float: right; margin-right: 20px;" ng-click="clearLocalStorage()">Delete Local Storage</button>
+        	</div><br>
+		</ion-list>
+  	</ion-content>
+</ion-view>

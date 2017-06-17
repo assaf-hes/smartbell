@@ -1,0 +1,64 @@
+<ion-view view-title="Dashboard">
+  <ion-content class="padding" ng-controller="ManageDataCtrl" ng-init="getPatientsAlerts()">
+    <h4>Active Emergency Alerts <a href="#" ng-click="show = ! show" >[Show/Hide]</a></h4>
+    <div class="list-group" ng-repeat="alert in activeEmergencyAlerts" ng-show="show">
+      <div class="item">
+        <div class="row">
+          <div class="col truncate">
+            Patient-ID: {{alert.idPatient}}, Room: {{alert.room}}, Age: {{alert.age}}
+          </div>  
+        </div>
+        <div class="row">
+          <div class="col">
+            Firstname/Name: {{alert.firstname}} {{alert.name}}
+          </div> 
+        </div>
+        <div class="row">
+          <div class="col">
+            Message: {{alert.message}}
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            Date: {{alert.create_date}}
+          </div>
+        </div>   
+      </div>
+    </div><br>
+    <h4>Alerts</h4>
+    <p>Someone need your help!</p>
+    <div class="list-group" ng-init="init()">
+      <div class="item"  ng-repeat="alerts in latestAlert">
+        <div ng-repeat="alert in alerts" data-ng-disabled="checkIfClicked(alerts, latestAlert.indexOf(alerts))">
+          <div class="row truncate">
+            <div class="col">
+              Patient-ID: {{alert.idPatient}}, Room: {{alert.room}}, Age: {{alert.age}}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              Firstname/Name: {{alert.firstname}} {{alert.name}}
+            </div> 
+          </div>
+          <div class="row">
+            <div class="col">
+              Message: {{alert.message}}
+            </div> 
+          </div>
+          <div class="row">
+            <div class="col">
+              Date: {{alert.create_date}}, {{latestAlert.indexOf(alerts)}}
+            </div> 
+          </div>
+          <div>
+            <button id="{{latestAlert.indexOf(alerts)}}" class="button button-positive small_button" style="float: right; width: 70px; margin-right: 10px;" disabled="{{isTakeItBtnClicked}}" data-ng-disabled="checkIfClicked()" ng-click="takeAlert(latestAlert.indexOf(alerts))">Take It</button>&nbsp;&nbsp;
+            <button class="button button-positive small_button" style="float: right; width: 70px; margin-right: 10px;" ng-click="deleteAlert(alerts, latestAlert.indexOf(alerts))">Delete</button>
+          </div>
+        </div>
+      </div><br>
+      <div>
+        <button class="button button-positive" style="float: right;" ng-click="clearAllAlerts()">Clear all alerts</button>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

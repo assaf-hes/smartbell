@@ -1,0 +1,41 @@
+<ion-view view-title="Beacons">
+	<ion-content ng-contoller="ManageDataCtrl">
+		<div class="list" id="listBeacons">
+			<div class="item" ng-repeat="(key, value) in beacons">
+				<div class="row">
+					<div class="col truncate">
+					  uuid: {{value.uuid}}
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+					  major: {{value.major}}
+					</div>
+					<div class="col">
+					  minor: {{value.minor}}
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+					  proximity: {{value.proximity}}
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+					  rssi: {{value.rssi}}
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+					  tx: {{value.tx}}
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+					  accuracy: {{value.accuracy}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>
